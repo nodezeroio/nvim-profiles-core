@@ -11,18 +11,12 @@ return {
                 dark = "mocha",
             },
         },
-        postSetup = function(pluginDef)
-            vim.cmd.colorscheme("catppuccin")
-        end
     },
     {
      "nvim-treesitter/nvim-treesitter",
      spec = {
        name = "nvim-treesitter.configs",
      },
-     config = function(plugin_def)
-        require("nvim-treesitter.configs").setup(plugin_def.options)
-     end,
      options = {
        ensure_installed = {
             "lua",
